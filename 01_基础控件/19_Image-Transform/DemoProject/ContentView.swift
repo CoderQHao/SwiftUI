@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ContentView : View {
     
-    @State var isPresented = false
-    
     var body: some View {
         VStack {
             Image("couples")
@@ -32,18 +30,6 @@ struct ContentView : View {
             
             Image("couples")
                 .rotation3DEffect(Angle.init(degrees: 30), axis: (x: CGFloat(0.1), y: CGFloat(0.1), z: CGFloat(0)))
-        }
-    }
-}
-
-struct MyDetailView : View {
-    
-    let message: String
-    
-    var body: some View {
-        VStack {
-            Text(message)
-                .font(.largeTitle)
         }
     }
 }

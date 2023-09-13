@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ContentView : View {
     
-    @State var isPresented = false
-    
     var body: some View {
         VStack {
             Image("couples")
@@ -50,18 +48,6 @@ struct ContentView : View {
             
             Image("couples")
                 .luminanceToAlpha()
-        }
-    }
-}
-
-struct MyDetailView : View {
-    
-    let message: String
-    
-    var body: some View {
-        VStack {
-            Text(message)
-                .font(.largeTitle)
         }
     }
 }

@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ContentView : View {
     
-    @State var isPresented = false
-    
     var body: some View {
         VStack {
             Image("couples")
@@ -29,18 +27,6 @@ struct ContentView : View {
             
             Image("couples")
                 .shadow(color: .purple, radius: 20, x: 20, y: 20)
-        }
-    }
-}
-
-struct MyDetailView : View {
-    
-    let message: String
-    
-    var body: some View {
-        VStack {
-            Text(message)
-                .font(.largeTitle)
         }
     }
 }
