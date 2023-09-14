@@ -16,12 +16,15 @@ struct ContentView : View {
     
     var body: some View {
         VStack {
-            Picker(selection: $selectedItem, label: Text("Fruits")) {
+            Picker(selection: $selectedItem) {
                 ForEach(0 ..< fruits.count, id: \.self) {
                     Text(self.fruits[$0]).tag($0)
                         .foregroundColor(self.colors[$0])
                 }
-            }.pickerStyle(.wheel)
+            } label: {
+                Text("Fruits")
+            }
+            .pickerStyle(.wheel)
             
             Text("Your choice:")
             + Text("\(fruits[selectedItem])")
