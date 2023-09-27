@@ -31,11 +31,16 @@ struct ContentView : View {
         NavigationView {
             Text("SwiftUI's NavigationView")
                 .navigationTitle(Text("SwiftUI"))
-                .navigationBarItems(leading: Button(action: {
-                    print("Go to index Page")
-                }, label: {
-                    Text("Index")
-                }), trailing: TrailingButtons())
+                .toolbar(content: {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button("Leading") {
+                            print("Leading-----")
+                        }
+                    }
+                    ToolbarItem(placement: .topBarTrailing) {
+                        TrailingButtons()
+                    }
+                })
         }
     }
 }
