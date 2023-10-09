@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class UserModel: ObservableObject{
+class UserModel: ObservableObject {
     @Published var nickName: String = ""
 }
 
